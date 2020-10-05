@@ -1,0 +1,226 @@
+Tieu_De: "&4&lVũ &c&lKhí"
+So_Hang: 6
+Cau_Lenh: vukhi #Lệnh dùng để mở Menu, chỉ cần đặt sau /guikhoidau. VD: Cau_Lenh: menu -> /guikhoidau menu
+O_Trong: REDSTONE_BLOCK 3 #Phần này chia làm hai phần chính: vật_phẩm số_lượng. 
+Menu_Chinh: false
+Vat_Pham:
+  KiemGo:
+    Vat_Lieu: WOODEN_SWORD
+    So_Luong: 1
+    Ten_Hien_Thi: "&a&lKIẾM GỖ"
+    Chu_Thich:
+      - ""
+      - "&cThanh kiếm cơ bản"
+      - ""
+    Cuong_Hoa:
+      - SHARPNESS 1
+      - UNBREAKING 1
+    Thuoc_Tinh:
+    Hanh_Dong:
+      - "TIN_NHAN:&bBạn đã nhận được một thanh kiếm gỗ!"
+      - 'CONSOLE:/give %player_name% wooden_sword 1'
+    Chi_Phi:
+      - WOODEN_PLANKS 2
+      - STICK 1
+      - "TIEN:5"
+    Vi_Tri: 12
+  KiemDa:
+    Vat_Lieu: STONE_SWORD
+    So_Luong: 1
+    Ten_Hien_Thi: "&7&lKIẾM ĐÁ"
+    Chu_Thich:
+      - ""
+      - "&cMức độ: thông dụng"
+      - ""
+    Cuong_Hoa:
+      - SHARPNESS 2
+      - UNBREAKING 1
+    Thuoc_Tinh:
+    Hanh_Dong:
+      - "TIN_NHAN:&bBạn đã nhận được một thanh kiếm đá!"
+      - 'CONSOLE:/give %player_name% stone_sword 1'
+    Chi_Phi:
+      - STONE 2
+      - STICK 1
+      - "TIEN:10"
+    Vi_Tri: 21
+  KiemSat:
+    Vat_Lieu: IRON_SWORD
+    So_Luong: 1
+    Ten_Hien_Thi: "&f&lKIẾM SẮT"
+    Chu_Thich:
+      - ""
+      - "&cXếp hạng trung bình"
+      - ""
+    Cuong_Hoa:
+      - SHARPNESS 3
+      - UNBREAKING 2
+    Thuoc_Tinh:
+    Hanh_Dong:
+      - "TIN_NHAN:&bBạn đã nhận được một thanh kiếm sắt!"
+      - 'CONSOLE:/give %player_name% iron_sword 1'
+    Chi_Phi:
+      - IRON_INGOT 2
+      - STICK 1
+      - "TIEN:15"
+    Vi_Tri: 30
+  KiemVang:
+    Vat_Lieu: GOLDEN_SWORD
+    So_Luong: 1
+    Ten_Hien_Thi: "&e&lKIẾM VÀNG"
+    Chu_Thich:
+      - ""
+      - "&cMạnh nhưng lởm"
+      - ""
+    Cuong_Hoa:
+      - SHARPNESS 4
+      - UNBREAKING 2
+    Thuoc_Tinh:
+    Hanh_Dong:
+      - "TIN_NHAN:&bBạn đã nhận được một thanh kiếm vàng!"
+      - 'CONSOLE:/give %player_name% golden_sword 1'
+    Chi_Phi:
+      - GOLD_INGOT 2
+      - STICK 1
+      - "TIEN:20"
+    Vi_Tri: 39
+  KiemKimCuong:
+    Vat_Lieu: DIAMOND_SWORD
+    So_Luong: 1
+    Ten_Hien_Thi: "&b&lKIẾM KIM CƯƠNG"
+    Chu_Thich:
+      - ""
+      - "&cSiêu kiếm"
+      - ""
+    Cuong_Hoa:
+      - SHARPNESS 5
+      - UNBREAKING 3
+    Thuoc_Tinh:
+    Hanh_Dong:
+      - "TIN_NHAN:&bBạn đã nhận được một thanh kiếm kim cương!"
+      - 'CONSOLE:/give %player_name% diamond_sword 1'
+    Chi_Phi:
+      - DIAMOND 2
+      - STICK 1
+      - "TIEN:25"
+    Vi_Tri: 48
+  CungCapMot:
+    Vat_Lieu: BOW
+    So_Luong: 1
+    Ten_Hien_Thi: "&b&lUNG CẤP 1"
+    Chu_Thich:
+      - ""
+      - "&cCấp 1"
+      - ""
+    Cuong_Hoa:
+      - POWER 1
+      - UNBREAKING 1
+    Thuoc_Tinh:
+    Hanh_Dong:
+      - "TIN_NHAN:&bBạn đã nhận được một cây cung cấp &c&l1&b!"
+      - 'CONSOLE:/give %player_name% bow 1'
+    Chi_Phi:
+      - STICK 3
+      - STRING 3
+      - "TIEN:10"
+    Vi_Tri: 16
+  CungCapHai:
+    Vat_Lieu: BOW
+    So_Luong: 1
+    Ten_Hien_Thi: "&b&lUNG CẤP 2"
+    Chu_Thich:
+      - ""
+      - "&cCấp 2"
+      - ""
+    Cuong_Hoa:
+      - POWER 2
+      - UNBREAKING 1
+    Thuoc_Tinh:
+    Hanh_Dong:
+      - "TIN_NHAN:&bBạn đã nhận được một cây cung cấp &c&l2&b!"
+      - 'CONSOLE:/give %player_name% bow 1'
+    Chi_Phi:
+      - STICK 3
+      - STRING 3
+      - "TIEN:20"
+    Vi_Tri: 25
+  CungCapBa:
+    Vat_Lieu: BOW
+    So_Luong: 1
+    Ten_Hien_Thi: "&b&lUNG CẤP 3"
+    Chu_Thich:
+      - ""
+      - "&cCấp 3"
+      - ""
+    Cuong_Hoa:
+      - POWER 3
+      - PUNCH 1
+      - UNBREAKING 2
+    Thuoc_Tinh:
+    Hanh_Dong:
+      - "TIN_NHAN:&bBạn đã nhận được một cây cung cấp &c&l3&b!"
+      - 'CONSOLE:/give %player_name% bow 1'
+    Chi_Phi:
+      - STICK 3
+      - STRING 3
+      - "TIEN:30"
+    Vi_Tri: 34
+  CungCapBon:
+    Vat_Lieu: BOW
+    So_Luong: 1
+    Ten_Hien_Thi: "&b&lUNG CẤP 4"
+    Chu_Thich:
+      - ""
+      - "&cCấp 4"
+      - ""
+    Cuong_Hoa:
+      - POWER 4
+      - PUNCH 2
+      - UNBREAKING 2
+    Thuoc_Tinh:
+    Hanh_Dong:
+      - "TIN_NHAN:&bBạn đã nhận được một cây cung cấp &c&l4&b!"
+      - 'CONSOLE:/give %player_name% bow{display: 1'
+    Chi_Phi:
+      - STICK 3
+      - STRING 3
+      - "TIEN:40"
+    Vi_Tri: 43
+  CungCapNam:
+    Vat_Lieu: BOW
+    So_Luong: 1
+    Ten_Hien_Thi: "&b&lUNG CẤP 5"
+    Chu_Thich:
+      - ""
+      - "&cCấp 5"
+      - ""
+    Cuong_Hoa:
+      - POWER 5
+      - PUNCH 2
+      - FLAME
+      - UNBREAKING 3
+    Thuoc_Tinh:
+    Hanh_Dong:
+      - "TIN_NHAN:&bBạn đã nhận được một cây cung cấp &c&l5&b!"
+      - 'CONSOLE:/give %player_name% bow 1'
+    Chi_Phi:
+      - STICK 3
+      - STRING 3
+      - "TIEN:50"
+    Vi_Tri: 52
+  DongMenu:
+    Vat_Lieu: BARRIER
+    So_Luong: 1
+    Ten_Hien_Thi: "&4&lĐóng menu"
+    Chu_Thich:
+      - ""
+      - "&cClick để đóng menu"
+      - ""
+    Cuong_Hoa:
+    Thuoc_Tinh:
+    Hanh_Dong:
+      - "TIN_NHAN:&aĐã đóng menu Vũ Khí!"
+      - "DONG_MENU"
+    Chi_Phi:
+    Vi_Tri: 5
+    

@@ -1,0 +1,124 @@
+Tieu_De: "&b&lGiáp"
+So_Hang: 6
+Cau_Lenh: giap #Lệnh dùng để mở Menu, chỉ cần đặt sau /guikhoidau. VD: Cau_Lenh: menu -> /guikhoidau menu
+O_Trong: BLUE_STAINED_GLASS_PANE 3 #Phần này chia làm hai phần chính: vật_phẩm số_lượng. 
+Menu_Chinh: false
+Vat_Pham:
+  BoGiapSat:
+    Vat_Lieu: IRON_HELMET
+    So_Luong: 1
+    Ten_Hien_Thi: "&fGiáp sắt"
+    Chu_Thich:
+      - ""
+      - "&2&lGói này bao gồm:"
+      - ""
+      - "&7- &fNón sắt"
+      - "&7- &fGiáp sắt"
+      - "&7- &fQuần sắt"
+      - "&7- &fGiày sắt"
+      - ""
+    Cuong_Hoa:
+    Thuoc_Tinh:
+      - HIDE_ATTRIBUES
+    Hanh_Dong:
+      - "give %player_name% chainmail_helmet"
+      - "give %player_name% chainmail_chestplate"
+      - "give %player_name% chainmail_leggings"
+      - "give %player_name% chainmail_boots"
+    Chi_Phi:
+      - GOLDEN_INGOT 24
+      - "TIEN:10"
+    Vi_Tri: 29
+  BoGiapLuoi:
+    Vat_Lieu: CHAINMAIL_HELMET
+    So_Luong: 1
+    Ten_Hien_Thi: "&fGiáp lưới"
+    Chu_Thich:
+      - ""
+      - "&2&lGói này bao gồm:"
+      - ""
+      - "&7- &fNón lưới"
+      - "&7- &fGiáp lưới"
+      - "&7- &fQuần lưới"
+      - "&7- &fGiày lưới"
+      - ""
+    Cuong_Hoa:
+    Thuoc_Tinh:
+      - HIDE_ATTRIBUES
+    Hanh_Dong:
+      - "give %player_name% chainmail_helmet"
+      - "give %player_name% chainmail_chestplate"
+      - "give %player_name% chainmail_leggings"
+      - "give %player_name% chainmail_boots"
+    Chi_Phi:
+      - IRON_INGOT 24
+      - GUNPOWDER 12
+      - COAL 12
+      - "TIEN:20"
+    Vi_Tri: 31
+  BoGiapVang:
+    Vat_Lieu: GOLDEN_HELMET
+    So_Luong: 1
+    Ten_Hien_Thi: "&fGiáp vàng"
+    Chu_Thich:
+      - ""
+      - "&2&lGói này bao gồm:"
+      - ""
+      - "&7- &fNón vàng"
+      - "&7- &fGiáp vàng"
+      - "&7- &fQuần vàng"
+      - "&7- &fGiày vàng"
+      - ""
+    Cuong_Hoa:
+    Thuoc_Tinh:
+      - HIDE_ATTRIBUES
+    Hanh_Dong:
+      - "give %player_name% golden_helmet"
+      - "give %player_name% golden_chestplate"
+      - "give %player_name% golden_leggings"
+      - "give %player_name% golden_boots"
+    Chi_Phi:
+      - GOLD_INGOT 24
+      - "TIEN:30"
+    Vi_Tri: 33
+  BoGiapKimCuong:
+    Vat_Lieu: DIAMOND_HELMET
+    So_Luong: 1
+    Ten_Hien_Thi: "&fGiáp kim cương"
+    Chu_Thich:
+      - ""
+      - "&2&lGói này bao gồm:"
+      - ""
+      - "&7- &fNón kim cương"
+      - "&7- &fGiáp kim cương"
+      - "&7- &fQuần kim cương"
+      - "&7- &fGiày kim cương"
+      - ""
+    Cuong_Hoa:
+    Thuoc_Tinh:
+      - HIDE_ATTRIBUES
+    Hanh_Dong:
+      - "give %player_name% diamond_helmet"
+      - "give %player_name% diamond_chestplate"
+      - "give %player_name% diamond_leggings"
+      - "give %player_name% diamond_boots"
+    Chi_Phi:
+      - DIAMOND 24
+      - "TIEN:40"
+    Vi_Tri: 35
+  DongMenu:
+    Vat_Lieu: BARRIER
+    So_Luong: 1
+    Ten_Hien_Thi: "&4&lĐóng menu"
+    Chu_Thich:
+      - ""
+      - "&cClick để đóng menu"
+      - ""
+    Cuong_Hoa:
+    Thuoc_Tinh:
+      - HIDE_ATTRIBUES
+    Hanh_Dong:
+      - "TIN_NHAN:&aĐã đóng menu Vũ Khí!"
+      - "DONG_MENU"
+    Chi_Phi:
+    Vi_Tri: 5

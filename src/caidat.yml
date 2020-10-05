@@ -1,0 +1,22 @@
+############################################
+#                 LƯU Ý!!!                 #
+#                                          #
+# Vui lòng không xóa hay chỉnh sửa giá trị #
+#   có sẵn trong Phien_Ban. Xin cảm ơn!    #
+############################################
+
+Phien_Ban: 1.2
+
+Tai_Lai: "&a&lPlugin đã được tải lại!"
+
+Khong_Quyen:
+  Lenh: "&cBạn không có quyền thực hiện câu lệnh này!" 
+  Menu: "&cBạn không có quyền mở menu này!"
+
+Thieu_Tien: "&cBạn không có đủ &f$%so_tien% &cđể thực hiện!"
+
+Thieu_Vat_Pham: "&cBạn không có đủ &fx%so_luong% %vat_pham%"
+
+Khong_Tim_Thay_Nguoi_Choi: "&3Không tìm thấy người chơi &r%ten%"
+
+Khong_Phai_La_Nguoi_Choi: "&eConsole không thể thực hiện lệnh này!"

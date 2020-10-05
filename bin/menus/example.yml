@@ -1,0 +1,87 @@
+Tieu_De: "&a&lMenu &8&lMẫu"
+So_Hang: 6
+Cau_Lenh: mainmenu #Lệnh dùng để mở Menu, chỉ cần đặt sau /guikhoidau. VD: Cau_Lenh: menu -> /guikhoidau menu
+O_Trong: GRAY_GLASS_PANE 1 #Phần này chia làm hai phần chính: vật_phẩm số_lượng. 
+Menu_Chinh: false
+Vat_Pham:
+  PlayerHead:
+    Vat_Lieu: PLAYER_HEAD
+    Chu_So_Huu: KnightHat
+    So_Luong: 1
+    Ten_Hien_Thi: "&aThông tin người chơi %player_displayname%"
+    Chu_Thich:
+      - ""
+      - "&cBạn cần có &1&lPlaceHolderAPI"
+      - "&cđể hiển thị các thông số sau:"
+      - ""
+      - "&eTên Thật: &r%player_name%"
+      - "&eSinh lực: &b&l%player_health_rounded%&a&l/&b&l%player_max_health%"
+      - "&eThể lực: &b&l%player_food_level%&a&l/&b&l20"
+      - "&eĐiểm kinh nghiệm: &b&l%player_exp%"
+      - "&eCấp độ: &b&l%player_level%"
+      - "&eVị trí: &b&lX:%player_x% Y:%player_y% Z:%player_z%"
+      - "&eThế giới: &b&l%player_world%"
+      - ""
+    Cuong_Hoa:
+    Thuoc_Tinh:
+    Hanh_Dong:
+    Chi_Phi:
+    Vi_Tri: 5
+  VuKhi:
+    Vat_Lieu: GOLD_SWORD
+    So_Luong: 1
+    Ten_Hien_Thi: "&d☢ &aKho Vũ Khí&d ☠"
+    Chu_Thich:
+      - ""
+      - "&1Truy cập vào kho vũ khí"
+      - ""
+    Cuong_Hoa:
+      - UNBREAKING 1
+    Thuoc_Tinh:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+    Hanh_Dong:
+      - "MO_MENU:VuKhi.yml"
+      - "TIN_NHAN: &9Bạn đã truy cập vào kho vũ khí!"
+    Chi_Phi:
+      - IRON_INGOT 1
+      - "TIEN:10"
+    Vi_Tri: 44
+  AoGiap:
+    Vat_Lieu: DIAMOND_CHESTPLATE
+    So_Luong: 1
+    Ten_Hien_Thi: "&d⛑ &6Giáp chiến đấu&d ⛑"
+    Chu_Thich:
+      - ""
+      - "&1Nơi trưng bày các bộ"
+      - "&1giáp siêu đẹp!"
+      - ""
+    Cuong_Hoa:
+      - UNBREAKING 1
+    Thuoc_Tinh:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+    Hanh_Dong:
+      - "MO_MENU:Giap.yml"
+      - "TIN_NHAN: &9Bạn đã truy cập vào kho giáp!"
+    Chi_Phi:
+     - GOLD_INGOT 1
+     - "TIEN:20"
+    Vi_Tri: 38
+  Shop:
+    Vat_Lieu: DIRT
+    So_Luong: 1
+    Ten_Hien_Thi: "&d♻ &cĐỒ VÔ DỤNG&d ♻"
+    Chu_Thich:
+      - ""
+      - "&1Bày bán các thứ mà bạn"
+      - "&1SẼ KHÔNG BAO GIỜ MUA!"
+      - ""
+    Cuong_Hoa:
+    Hanh_Dong:
+      - "MO_MENU: VoDung.yml"
+      - "THONG_BAO:&5Người chơi %player_name% đã ghép thăm shop vô dụng!"
+    Chi_Phi:
+      - GRASS 10
+      - "TIEN:1"
+    Vi_Tri: 41

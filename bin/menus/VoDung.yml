@@ -1,0 +1,22 @@
+Tieu_De: "&d&lShop &5&lVô dụng"
+So_Hang: 3
+Cau_Lenh: vodung #Lệnh dùng để mở Menu, chỉ cần đặt sau /guikhoidau. VD: Cau_Lenh: menu -> /guikhoidau menu
+O_Trong: AIR #Phần này chia làm hai phần chính: vật_phẩm số_lượng. 
+Menu_Chinh: false
+Vat_Pham:
+  KiemGo:
+    Vat_Lieu: DIRT
+    So_Luong: 1
+    Ten_Hien_Thi: "&8&lCỤC ĐẤT"
+    Chu_Thich:
+      - ""
+      - "&cNó chỉ là một cục cất"
+      - ""
+    Cuong_Hoa:
+    Thuoc_Tinh:
+    Hanh_Dong:
+      - "TIN_NHAN:&bBạn vừa mất $50!"
+      - "give %player_name% dirt"
+    Chi_Phi:
+      - "TIEN:50"
+    Vi_Tri: 14
