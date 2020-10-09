@@ -1,6 +1,6 @@
 Tieu_De: "&a&lMenu &8&lMẫu"
 So_Hang: 6
-Cau_Lenh: mainmenu #Lệnh dùng để mở Menu, chỉ cần đặt sau /guikhoidau. VD: Cau_Lenh: menu -> /guikhoidau menu
+Cau_Lenh: example #Lệnh dùng để mở Menu, chỉ cần đặt sau /guikhoidau. VD: Cau_Lenh: menu -> /guikhoidau menu
 O_Trong: GRAY_GLASS_PANE 1 #Phần này chia làm hai phần chính: vật_phẩm số_lượng. 
 Menu_Chinh: false
 Vat_Pham:

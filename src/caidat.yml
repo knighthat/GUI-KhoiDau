@@ -5,13 +5,14 @@
 #   có sẵn trong Phien_Ban. Xin cảm ơn!    #
 ############################################
 
-Phien_Ban: 1.2
+Phien_Ban: 1.3
 
 Tai_Lai: "&a&lPlugin đã được tải lại!"
 
 Khong_Quyen:
   Lenh: "&cBạn không có quyền thực hiện câu lệnh này!" 
   Menu: "&cBạn không có quyền mở menu này!"
+  Vat_Pham: "&cBạn không thể chọn món đồ này"
 
 Thieu_Tien: "&cBạn không có đủ &f$%so_tien% &cđể thực hiện!"
 

@@ -12,26 +12,57 @@ import org.bukkit.inventory.ItemStack;
 
 public class PhanLoai {
 
-	private static Map<String, Byte> items = new HashMap<String, Byte>();
+	private static Map<String, Integer> items = new HashMap<String, Integer>();
+	private static Map<String, String> enchantments = new HashMap<String, String>();
 
-	{
-		items.put("DARK_OAK_", (byte) 1);
-		items.put("ACACIA_", (byte) 0);
-		items.put("JUNGLE_", (byte) 3);
-		items.put("BIRCH_", (byte) 2);
-		items.put("SPRUCE_", (byte) 1);
-		items.put("OAK_", (byte) 0);
-		items.put("STONE_BRICK_", (byte) 5);
-		items.put("NETHER_BRICK_", (byte) 6);
-		items.put("BRICK_", (byte) 4);
+	public static boolean checkMaterial(String material) {
+		return Arrays.stream(Material.values()).map(Material::name).collect(Collectors.toList())
+				.contains(material.toUpperCase());
+	}
+
+	static {
+		items.put("DARK_OAK_", 1);
+		items.put("ACACIA_", 0);
+		items.put("JUNGLE_", 3);
+		items.put("BIRCH_", 2);
+		items.put("SPRUCE_", 1);
+		items.put("OAK_", 0);
+		items.put("COBBLESTONE_", 3);
+		items.put("STONE_BRICK_", 5);
+		items.put("NETHER_BRICK_", 6);
+		items.put("BRICK_", 4);
+		enchantments.put("POWER", "ARROW_DAMAGE");
+		enchantments.put("FLAME", "ARROW_FIRE");
+		enchantments.put("INFINITY", "ARROW_INFINITY");
+		enchantments.put("PUNCH", "ARROW_KNOCKBACK");
+		enchantments.put("SHARPNESS", "DAMAGE_ALL");
+		enchantments.put("BANE_OF_ARTHROPODS", "DAMAGE_ARTHROPODS");
+		enchantments.put("SMITE", "DAMAGE_UNDEAD");
+		enchantments.put("EFFICIENCY", "DIG_SPEED");
+		enchantments.put("FORTUNE", "LOOT_BONUS_BLOCKS");
+		enchantments.put("LOOTING", "LOOT_BONUS_MOBS");
+		enchantments.put("RESPIRATION", "OXYGEN");
+		enchantments.put("PROTECTION", "PROTECTION_ENVIRONMENTAL");
+		enchantments.put("BLAST_PROTECTION", "PROTECTION_EXPLOSIONS");
+		enchantments.put("FEATHER_FALLING", "PROTECTIONG_FALL");
+		enchantments.put("FIRE_PROTECTION", "PROTECTION_FIRE");
+		enchantments.put("PROJECTILE_PROTECTION", "PROTECTION_PROJECTILE");
+		enchantments.put("AQUA_AFFINITY", "WATER_WORKER");
+		enchantments.put("UNBREAKING", "DURABILITY");
+	}
+
+	public static Integer checkInteger(int chuSo, int gioiHan) {
+		if (chuSo >= 0 && chuSo <= gioiHan)
+			return chuSo;
+		return 1;
 	}
 
 	@SuppressWarnings("deprecation")
 	public static ItemStack phanLoaiItems(String a) {
 		String vatPham = a.toUpperCase();
-		byte duLieu = 0;
-		if (Material.getMaterial(vatPham) == null) {
-			if (vatPham.contains("_SHOVEL"))
+		int duLieu = 0;
+		if (!checkMaterial(vatPham)) {
+			if (vatPham.endsWith("_SHOVEL"))
 				vatPham = vatPham.replace("_SHOVEL", "_SPADE");
 			if (vatPham.startsWith("GOLDEN_"))
 				vatPham = vatPham.replace("GOLDEN_", "GOLD_");
@@ -43,105 +74,55 @@ public class PhanLoai {
 				vatPham = vatPham.replace("TERRACOTTA", "STAINED_CLAY");
 			if (vatPham.equals("RED_SANDSTONE_SLAB"))
 				vatPham = "STONE_SLAB2";
-			if (vatPham.contains("_WALL")) {
+			if (vatPham.endsWith("_WALL")) {
 				if (vatPham.contains("MOSSY_"))
 					duLieu += 1;
 				vatPham = "COBBLE_WALL";
 			}
-			if (vatPham.contains("_SLAB") && !vatPham.contains("_SLAB2")) {
-				vatPham = "STEP";
-				if (vatPham.contains("BRICK_")) {
+			if (vatPham.endsWith("_SLAB")) {
+				if (items.keySet().contains(vatPham)) {
 					for (String i : items.keySet())
 						if (vatPham.contains(i))
 							duLieu = items.get(i);
-				} else
+					vatPham = vatPham.contains("BTICK_") ? "STEP" : "WOOD_STEP";
+				} else if (vatPham.contains("STONE_")) {
 					duLieu = (byte) (vatPham.contains("SMOOTH_STONE_") ? 0
 							: (vatPham.contains("SANDSTONE_") ? 1 : (vatPham.contains("COBBLESTONE_") ? 3 : 7)));
+					vatPham = "STEP";
+				}
 			}
-			if (vatPham.contains("GRANITE") || vatPham.contains("DIORITE") || vatPham.contains("ANDESITE")) {
-				vatPham = "STONE";
+			if (vatPham.endsWith("GRANITE") || vatPham.endsWith("DIORITE") || vatPham.endsWith("ANDESITE")) {
 				duLieu = (byte) (vatPham.contains("GRANITE") ? 1 : (vatPham.contains("DIORITE") ? 3 : 5));
-				if (vatPham.contains("POLISHED_"))
+				if (vatPham.startsWith("POLISHED_"))
 					duLieu += 1;
+				vatPham = "STONE";
 			}
-			if (vatPham.contains("_LOG") || vatPham.contains("_PLANKS") || vatPham.contains("_SLAB")) {
+			if (vatPham.endsWith("_LOG") || vatPham.endsWith("_PLANKS")) {
 				for (String i : items.keySet())
 					if (vatPham.contains(i))
 						duLieu = items.get(i);
-				vatPham = (vatPham.contains("_PLANK") ? "WOOD"
-						: (vatPham.contains("_SLAB") ? "WOOD_STEP"
-								: (vatPham.contains("ACACIA_") || vatPham.contains("DARK_OAK_") ? "LOG_2" : "LOG")));
+				vatPham = (vatPham.endsWith("_PLANK") ? "WOOD"
+						: (vatPham.startsWith("ACACIA_") || vatPham.startsWith("DARK_OAK_") ? "LOG_2" : "LOG"));
 			}
-			for (String i : Arrays.stream(DyeColor.values()).map(DyeColor::name).collect(Collectors.toList())) {
-				if (vatPham.replace("LIGHT_GRAY", "SILVER").startsWith(i)) {
-					vatPham = vatPham.replace(i.replace("SILVER", "LIGHT_GRAY").concat("_"), "");
-					duLieu = DyeColor.valueOf(i).getData();
-				}
-			}
+			for (DyeColor i : DyeColor.values())
+				if (vatPham.replace("LIGHT_GRAY", "SILVER").startsWith(i.toString()))
+					return new ItemStack(
+							Material.getMaterial(
+									vatPham.replace(i.toString().replace("SILVER", "LIGHT_GRAY").concat("_"), "")),
+							1, (byte) DyeColor.valueOf(i.toString()).getData());
 		}
-		if (Material.getMaterial(vatPham) == null)
-			return new ItemStack(Material.AIR);
-		return new ItemStack(Material.matchMaterial(vatPham), 1, (byte) duLieu);
+		if (!checkMaterial(vatPham))
+			vatPham = "AIR";
+		return new ItemStack(Material.getMaterial(vatPham), 1, (byte) duLieu);
+
 	}
 
-	public static Enchantment phanLoaiEnchant(String a) {
-		if (Enchantment.getByName(a.toUpperCase()) == null)
-			switch (a.toUpperCase()) {
-			case "POWER":
-				a = "ARROW_DAMAGE";
-				break;
-			case "FLAME":
-				a = "ARROW_FIRE";
-				break;
-			case "INFINITY":
-				a = "ARROW_INFINITY";
-				break;
-			case "PUNCH":
-				a = "ARROW_KNOCKBACK";
-				break;
-			case "SHAPRNESS":
-				a = "DAMAGE_ALL";
-				break;
-			case "BANE_OF_ARTHROPODS":
-				a = "DAMAGE_ARTHROPODS";
-				break;
-			case "SMITE":
-				a = "DAMAGE_UNDEAD";
-				break;
-			case "EFFICIENCY":
-				a = "DIG_SPEED";
-				break;
-			case "FORTUNE":
-				a = "LOOT_BONUS_BLOCKS";
-				break;
-			case "LOOTING":
-				a = "LOOT_BONUS_MOBS";
-				break;
-			case "RESPIRATION":
-				a = "OXYGEN";
-				break;
-			case "PROTECTION":
-				a = "PROTECTION_ENVIRONMENTAL";
-				break;
-			case "BLAST_PROTECTION":
-				a = "PROTECTION_EXPLOSIONS";
-				break;
-			case "FEATHER_FALLING":
-				a = "PROTECTION_FALL";
-				break;
-			case "FIRE_PROTECTION":
-				a = "PROTECTION_FIRE";
-				break;
-			case "PROJECILE_PROTECTION":
-				a = "PROTECTION_PROJECTILE";
-				break;
-			case "AQUA_AFFINITY":
-				a = "WATER_WORKER";
-				break;
-			case "UNBREAKING":
-				a = "DURABILITY";
-				break;
-			}
+	public static Enchantment phanLoaiEnchantments(String a) {
+		if (!Arrays.stream(Enchantment.values()).map(enchant -> enchant.getName()).collect(Collectors.toList())
+				.contains(a.toUpperCase()))
+			for (String i : enchantments.keySet())
+				if (a.toUpperCase().equals(i))
+					return Enchantment.getByName(enchantments.get(i));
 		return Enchantment.getByName(a.toUpperCase());
 	}
 }
